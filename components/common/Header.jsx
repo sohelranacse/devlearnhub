@@ -6,7 +6,7 @@ const PF = process.env.NEXT_PUBLIC_PF;
 import { useTheme } from "next-themes";
 import Router from "next/router";
 
-function Header({ groupData }) {
+function Header({ categoriesData }) {
   const [nav, setNav] = useState(false);
   const [search, setSearch] = useState(false);
   const { theme } = useTheme();
@@ -32,7 +32,7 @@ function Header({ groupData }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (query !== "") {
-      if (query.length < 4) alert("Please type atleast 3 characters.");
+      if (query.length < 3) alert("Please type atleast 3 characters.");
       else Router.push(`/search?q=${query}`);
     }
   };
@@ -146,7 +146,7 @@ function Header({ groupData }) {
                     <circle cx="19" cy="19" r="1"></circle>
                   </svg>
                 </span>
-                Full Stack Development
+                Courses
                 <span className="font-bold text-xl mt-0.5">
                   <svg
                     stroke="currentColor"
@@ -162,14 +162,14 @@ function Header({ groupData }) {
                 </span>
               </span>
               <ul className="absolute hidden bg-slate-100 dark:bg-gray-900 dark:text-white pt-2 rounded group-hover:block ease-linear duration-150">
-                {groupData.length > 0 &&
-                  groupData.map((group, i) => (
+                {categoriesData.length > 0 &&
+                  categoriesData.map((category, i) => (
                     <li className="text-center" key={i}>
                       <Link
-                        href={`/tutorial/${group.group_slug}`}
-                        className="block py-2 px-2 hover:bg-slate-200 ease-linear duration-150 dark:hover:bg-gray-500"
+                        href={`/category/${category.category_slug}`}
+                        className="block py-2 px-2 whitespace-nowrap hover:bg-slate-200 ease-linear duration-150 dark:hover:bg-gray-500"
                       >
-                        {group.group_name}
+                        {category.category_name}
                       </Link>
                     </li>
                   ))}
@@ -303,14 +303,14 @@ function Header({ groupData }) {
                 Home
               </Link>
             </li>
-            {groupData.length > 0 &&
-              groupData.map((group, i) => (
+            {categoriesData.length > 0 &&
+              categoriesData.map((category, i) => (
                 <li key={i} onClick={handleNav}>
                   <Link
-                    href={`/tutorial/${group.group_slug}`}
+                    href={`/category/${category.category_slug}`}
                     className="block py-2 px-2 hover:bg-slate-200 ease-linear duration-150 dark:text-gray-200 dark:hover:bg-gray-500"
                   >
-                    {group.group_name}
+                    {category.category_name}
                   </Link>
                 </li>
               ))}

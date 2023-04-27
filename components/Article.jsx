@@ -1,44 +1,37 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 function Article({
-  post_title,
-  post_slug,
-  description,
-  category_icon,
+  course_title,
+  course_slug,
+  course_thumb,
   category_name,
   category_slug,
   published_on,
 }) {
   return (
     <div className="mb-5 border rounded shadow-md p-4 dark:border-gray-700">
-      <h1 className="text-lg">
-        <Link
-          href={`/article/${post_slug}`}
-          className="text-blue-700 hover:text-blue-400 ease-linear duration-150"
-        >
-          {post_title}
-        </Link>
-      </h1>
-      <p className="pt-1 pb-2 text-justify dark:text-gray-400">
-        {description}{" "}
-        <Link
-          href={`/article/${post_slug}`}
-          className="italic text-slate-500 hover:text-blue-400 ease-linear duration-150"
-        >
-          read more
-        </Link>
-      </p>
+      <Link
+        href={`/course/${course_slug}`}
+        className="text-blue-700 hover:text-blue-400 ease-linear duration-150"
+      >
+        <img
+          className="rounded-sm"
+          src={`${API_URL}courses/${course_thumb}`}
+          alt={course_title}
+        />
+        <h1 className="text-lg my-3">{course_title}</h1>
+      </Link>
       <div className="flex flex-wrap justify-between">
         <Link
           href={`/category/${category_slug}`}
-          className="flex flex-wrap text-yellow-500 hover:text-blue-700 ease-linear duration-150"
+          className="text-sm text-yellow-500 hover:text-blue-700 ease-linear duration-150"
         >
-          <div
-            className="font-bold text-lg pt-0.5"
-            dangerouslySetInnerHTML={{ __html: category_icon }}
-          ></div>{" "}
-          <span className="text-sm font-normal">{category_name}</span>
+          {category_name}
         </Link>
-        <span className="text-xs text-slate-400 italic">{published_on}</span>
+        <span className="text-xs my-1 text-slate-400 italic">
+          {published_on}
+        </span>
       </div>
     </div>
   );

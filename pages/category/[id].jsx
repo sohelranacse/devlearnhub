@@ -31,7 +31,7 @@ function Category({ categoryPost, categoryInfo, categoryHandle }) {
 
 export const getServerSideProps = async ({ params }) => {
   const categoryPostRes = await axios.get(
-    `${API_URL}api/getPostByCategory/${params.id}`
+    `${API_URL}api/getCourseListofCategory/${params.id}`
   );
   const categoryInfoRes = await axios.get(
     `${API_URL}api/categoryInformation/${params.id}`

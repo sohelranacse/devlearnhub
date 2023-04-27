@@ -1,24 +1,6 @@
-import { useState } from "react";
 import Article from "./Article";
-import InfiniteScroll from "react-infinite-scroll-component";
-import axios from "axios";
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 function SpecificCategory({ categoryPost, categoryInfo }) {
-  // post and load more post
-  const [posts, setPosts] = useState(categoryPost);
-  const [hasMore, setHasMore] = useState(true);
-
-  // LOAD MORE Post
-  const getMorePost = async () => {
-    const morePostsRes = await axios.get(
-      `${API_URL}api/moreCategoryPosts/${categoryInfo.category_slug}/${posts.length}`
-    );
-    const morePostsData = morePostsRes.data.response;
-    if (morePostsData.length == 0) setHasMore(false);
-    setPosts((myPost) => [...myPost, ...morePostsData]);
-  };
-
   return (
     <section className="px-2 mt-14 min-h-screen dark:bg-gray-800">
       <div className="container mx-auto h-full md:pl-2 py-8">
@@ -29,30 +11,19 @@ function SpecificCategory({ categoryPost, categoryInfo }) {
           {categoryInfo.category_slogan}
         </h3>
 
-        {posts.length > 0 && (
-          <InfiniteScroll
-            dataLength={posts.length}
-            next={getMorePost}
-            hasMore={hasMore}
-            loader={<h4> Loading...</h4>}
-            endMessage={""}
-          >
-            <div className="md:grid grid-cols-3 gap-x-4">
-              {posts.map((article, i) => (
-                <Article
-                  key={i}
-                  post_title={article.post_title}
-                  post_slug={article.post_slug}
-                  description={article.description}
-                  category_icon={article.category_icon}
-                  category_name={article.category_name}
-                  category_slug={article.category_slug}
-                  published_on={article.post_date}
-                />
-              ))}
-            </div>
-          </InfiniteScroll>
-        )}
+        <div className="md:grid grid-cols-4 gap-x-4">
+          {categoryPost.map((article, i) => (
+            <Article
+              key={i}
+              course_title={article.course_title}
+              course_slug={article.course_slug}
+              course_thumb={article.course_thumb}
+              category_name={article.category_name}
+              category_slug={article.category_slug}
+              published_on={article.publised_date}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -18,7 +18,7 @@ export default function Home() {
     if (typeof quaryData === "string" && quaryData.length > 3) {
       const queryPosts = async () => {
         const filterPostRes = await axios.get(
-          `${API_URL}api/findPost?search=${quaryData}`
+          `${API_URL}api/findCourses?search=${quaryData}`
         );
         const filterPostData = filterPostRes.data.response;
         // console.log(filterPostData)
@@ -43,17 +43,16 @@ export default function Home() {
             Search keyword - {quaryData}
           </h1>
           {posts.length > 0 && (
-            <div className="md:grid grid-cols-3 gap-x-4">
+            <div className="md:grid grid-cols-4 gap-x-4">
               {posts.map((article, i) => (
                 <Article
                   key={i}
-                  post_title={article.post_title}
-                  post_slug={article.post_slug}
-                  description={article.description}
-                  category_icon={article.category_icon}
+                  course_title={article.course_title}
+                  course_slug={article.course_slug}
+                  course_thumb={article.course_thumb}
                   category_name={article.category_name}
                   category_slug={article.category_slug}
-                  published_on={article.post_date}
+                  published_on={article.publised_date}
                 />
               ))}
             </div>

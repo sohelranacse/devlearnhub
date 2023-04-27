@@ -6,11 +6,11 @@ import NextNProgress from "nextjs-progressbar";
 import Layout from "../components/Layout"
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
-function MyApp({ Component, pageProps, groupData }) {
+function MyApp({ Component, pageProps, categoriesData }) {
   return (
     <ThemeProvider enableSystem={true} attribute="class">
       <NextNProgress />
-      <Layout groupData={groupData}>
+      <Layout categoriesData={categoriesData}>
         <Component {...pageProps} />
       </Layout>
     </ThemeProvider>
@@ -19,10 +19,10 @@ function MyApp({ Component, pageProps, groupData }) {
 
 MyApp.getInitialProps = async (appContext) => {
   const appProps = await App.getInitialProps(appContext);
-  const groupRes = await axios.get(`${API_URL}api/getGroup`);
+  const groupRes = await axios.get(`${API_URL}api/categories`);
   return {
     ...appProps,
-    groupData: groupRes.data.response,
+    categoriesData: groupRes.data.response,
   };
 };
 

@@ -1,23 +1,21 @@
 import Link from "next/link";
 
-function Footer({ groupData }) {
+function Footer({ categoriesData }) {
   return (
     <footer>
       <div className="bg-slate-900 px-2 dark:bg-gray-900">
         <div className="container mx-auto md:grid grid-cols-4 gap-4 pt-8 md:py-8">
           <div className="py-4 md:py-8 pl-2">
-            <h3 className="py-4 uppercase text-slate-300">
-              Full Stack Development
-            </h3>
+            <h3 className="py-4 uppercase text-slate-300">Courses</h3>
             <ul className="text-slate-400 text-sm">
-              {groupData.length > 0 &&
-                groupData.map((group, i) => (
+              {categoriesData.length > 0 &&
+                categoriesData.map((category, i) => (
                   <li className="py-1" key={i}>
                     <Link
-                      href={`/tutorial/${group.group_slug}`}
+                      href={`/category/${category.category_slug}`}
                       className="hover:text-slate-200 ease-linear duration-100"
                     >
-                      {group.group_name}
+                      {category.category_name}
                     </Link>
                   </li>
                 ))}
