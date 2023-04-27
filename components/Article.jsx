@@ -10,7 +10,7 @@ function Article({
   published_on,
 }) {
   return (
-    <div className="mb-5 border rounded shadow-md p-4 dark:border-gray-700">
+    <div className="mb-5 border rounded shadow-md dark:border-gray-700">
       <Link
         href={`/course/${course_slug}`}
         className="text-blue-700 hover:text-blue-400 ease-linear duration-150"
@@ -20,9 +20,9 @@ function Article({
           src={`${API_URL}courses/${course_thumb}`}
           alt={course_title}
         />
-        <h1 className="text-lg my-3">{course_title}</h1>
+        <h1 className="text-lg my-3 px-2">{course_title}</h1>
       </Link>
-      <div className="flex flex-wrap justify-between">
+      <div className="flex flex-wrap justify-between px-2 pb-2">
         <Link
           href={`/category/${category_slug}`}
           className="text-sm text-yellow-500 hover:text-blue-700 ease-linear duration-150"

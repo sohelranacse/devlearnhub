@@ -3,18 +3,18 @@ import hljs from "highlight.js";
 import "highlight.js/styles/night-owl.css";
 // hljs.configure({ ignoreUnescapedHTML: true });
 
-const ShowCode = ({ language, children }) => {
+const ShowCode = ({ language, myCode }) => {
   const [copySuccess, setCopySuccess] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(children);
+    navigator.clipboard.writeText(myCode);
     setCopySuccess(true);
     setTimeout(() => {
       setCopySuccess(false);
     }, 1500);
   };
 
-  const highlightedCode = hljs.highlight(children, {
+  const highlightedCode = hljs.highlight(myCode, {
     language: language,
     ignoreIllegals: true,
   }).value;
