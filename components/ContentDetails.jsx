@@ -54,7 +54,9 @@ function ContentDetails({ course }) {
                   ></div>
                 ) : topics.topics_type == 2 ? (
                   <div key={i} className="my-4">
-                    <ShowCode language="php">{topics.topics_details}</ShowCode>
+                    <ShowCode language={topics.topics_details_title}>
+                      {topics.topics_details}
+                    </ShowCode>
                   </div>
                 ) : (
                   <div key={i} className="my-4">

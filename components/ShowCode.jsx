@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import hljs from "highlight.js";
 import "highlight.js/styles/night-owl.css";
-hljs.configure({ ignoreUnescapedHTML: true });
+// hljs.configure({ ignoreUnescapedHTML: true });
 
 const ShowCode = ({ language, children }) => {
-  const ref = useRef();
   const [copySuccess, setCopySuccess] = useState(false);
 
   const handleCopy = () => {
@@ -15,9 +14,10 @@ const ShowCode = ({ language, children }) => {
     }, 1500);
   };
 
-  useEffect(() => {
-    hljs.highlightElement(ref.current);
-  }, []);
+  const highlightedCode = hljs.highlight(children, {
+    language: language,
+    ignoreIllegals: true,
+  }).value;
 
   return (
     <div className="code-snippet bg-slate-800 my-6">
@@ -58,9 +58,10 @@ const ShowCode = ({ language, children }) => {
         )}
       </div>
       <pre>
-        <code ref={ref} className={language}>
-          {children}
-        </code>
+        <code
+          className={`hljs ${language}`}
+          dangerouslySetInnerHTML={{ __html: highlightedCode }}
+        />
       </pre>
     </div>
   );
