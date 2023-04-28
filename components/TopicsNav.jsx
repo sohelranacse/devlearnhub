@@ -11,15 +11,13 @@ function TopicsNav({ sectionList, activeSlug }) {
       <ul className="border border-gray-200 rounded-sm shadow-md dark:border-gray-700">
         {sectionList.length > 0 &&
           sectionList.map((section, i) => (
-            <>
-              <li key={i}>
-                <p className="py-2 px-3 bg-slate-100 font-bold border-b border-gray-300 dark:border-gray-700 dark:text-gray-200 dark:bg-gray-700">
-                  {section[0].section_name}
-                </p>
-              </li>
+            <li key={i}>
+              <p className="py-2 px-3 bg-slate-100 font-bold border-b border-gray-300 dark:border-gray-700 dark:text-gray-200 dark:bg-gray-700">
+                {section[0].section_name}
+              </p>
               <ul>
                 {sectionList[i].map((topics, j) => (
-                  <li key={i + j + 899}>
+                  <li key={j}>
                     <Link
                       className={
                         activeSlug === topics.topics_slug
@@ -35,7 +33,7 @@ function TopicsNav({ sectionList, activeSlug }) {
                   </li>
                 ))}
               </ul>
-            </>
+            </li>
           ))}
       </ul>
     </div>
