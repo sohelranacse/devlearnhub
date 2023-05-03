@@ -13,11 +13,11 @@ function FeaturedSlider({ featured }) {
       <Swiper
         modules={[Autoplay, Navigation]}
         slidesPerView={1}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log("slide change")}
+        // onSwiper={(swiper) => console.log(swiper)}
         navigation={true}
         autoplay={{
-          delay: 2000,
+          delay: 2300,
           disableOnInteraction: false,
         }}
         breakpoints={{

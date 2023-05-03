@@ -161,13 +161,13 @@ function Header({ categoriesData }) {
                   </svg>
                 </span>
               </span>
-              <ul className="absolute hidden bg-slate-100 dark:bg-gray-900 dark:text-white pt-2 rounded group-hover:block ease-linear duration-150">
+              <ul className="absolute hidden text-left bg-slate-100 dark:bg-gray-900 dark:text-white pt-2 rounded group-hover:block ease-linear duration-150">
                 {categoriesData.length > 0 &&
                   categoriesData.map((category, i) => (
-                    <li className="text-center" key={i}>
+                    <li key={i}>
                       <Link
                         href={`/category/${category.category_slug}`}
-                        className="block py-2 px-2 whitespace-nowrap hover:bg-slate-200 ease-linear duration-150 dark:hover:bg-gray-500"
+                        className="block py-2 px-4 whitespace-nowrap hover:bg-slate-200 ease-linear duration-150 dark:hover:bg-gray-500"
                       >
                         {category.category_name}
                       </Link>

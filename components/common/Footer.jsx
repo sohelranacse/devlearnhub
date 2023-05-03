@@ -55,12 +55,12 @@ function Footer({ categoriesData }) {
           <div className="py-4 md:py-8 pl-2">
             {/* last div */}
             <ul className="flex gap-x-5 md:justify-end md:pt-16">
-              <li className="h-8 w-8 bg-slate-300 rounded-full text-center leading-[26px]">
+              <li className="h-8 w-8 bg-slate-300 rounded-full leading-[26px]">
                 <a
                   href="https://facebook.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full inline-block w-full h-full hover:text-white hover:bg-[#3b5998] ease-linear duration-300"
+                  className="text-center rounded-full inline-block w-full h-full hover:text-white hover:bg-[#3b5998] ease-linear duration-300"
                 >
                   <svg
                     stroke="currentColor"
@@ -76,12 +76,12 @@ function Footer({ categoriesData }) {
                   </svg>
                 </a>
               </li>
-              <li className="h-8 w-8 bg-slate-300 rounded-full text-center leading-[26px]">
+              <li className="h-8 w-8 bg-slate-300 rounded-full leading-[26px]">
                 <a
                   href="https://facebook.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full inline-block w-full h-full hover:text-white hover:bg-[#FF0000] ease-linear duration-300"
+                  className="text-center rounded-full inline-block w-full h-full hover:text-white hover:bg-[#FF0000] ease-linear duration-300"
                 >
                   <svg
                     stroke="currentColor"
@@ -97,12 +97,12 @@ function Footer({ categoriesData }) {
                   </svg>
                 </a>
               </li>
-              <li className="h-8 w-8 bg-slate-300 rounded-full text-center leading-[26px]">
+              <li className="h-8 w-8 bg-slate-300 rounded-full leading-[26px]">
                 <a
                   href="https://facebook.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full inline-block w-full h-full hover:text-white hover:bg-[#0072b1] ease-linear duration-300"
+                  className="text-center rounded-full inline-block w-full h-full hover:text-white hover:bg-[#0072b1] ease-linear duration-300"
                 >
                   <svg
                     stroke="currentColor"
