@@ -8,7 +8,7 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 function MyApp({ Component, pageProps, categoriesData }) {
   return (
-    <ThemeProvider enableSystem={true} attribute="class">
+    <ThemeProvider enableSystem={false} attribute="class">
       <NextNProgress />
       <Layout categoriesData={categoriesData}>
         <Component {...pageProps} />
