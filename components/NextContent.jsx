@@ -4,7 +4,7 @@ const NextContent = ({ topics_title, topics_slug }) => {
   return (
     <div className="flex justify-end py-4 md:py-8">
       <Link
-        className="flex gap-x-4 md:gap-x-6 items-center w-full px-4 md:px-5 py-6 flex-row-reverse text-right hover:text-blue-400 ease-linear duration-350"
+        className="flex gap-x-4 md:gap-x-6 items-center w-full px-4 md:px-5 py-6 flex-row-reverse text-right hover:text-blue-400 ease-linear duration-350 dark:text-gray-200 dark:hover:text-blue-400"
         href={`/content/${topics_slug}`}
       >
         <svg
