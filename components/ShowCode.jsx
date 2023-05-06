@@ -6,15 +6,24 @@ import "highlight.js/styles/night-owl.css";
 const ShowCode = ({ language, myCode }) => {
   const [copySuccess, setCopySuccess] = useState(false);
 
+  function decodeHtmlEntities(text) {
+    return text
+      .replace(/&amp;/g, "&")
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">")
+      .replace(/&quot;/g, '"')
+      .replace(/&#039;/g, "'");
+  }
+
   const handleCopy = () => {
-    navigator.clipboard.writeText(myCode);
+    navigator.clipboard.writeText(decodeHtmlEntities(myCode));
     setCopySuccess(true);
     setTimeout(() => {
       setCopySuccess(false);
     }, 1500);
   };
 
-  const highlightedCode = hljs.highlight(myCode, {
+  const highlightedCode = hljs.highlight(decodeHtmlEntities(myCode), {
     language: language,
     ignoreIllegals: true,
   }).value;
