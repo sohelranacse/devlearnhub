@@ -146,7 +146,7 @@ function Header({ categoriesData }) {
                     <circle cx="19" cy="19" r="1"></circle>
                   </svg>
                 </span>
-                Courses
+                Free Courses
                 <span className="font-bold text-xl mt-0.5">
                   <svg
                     stroke="currentColor"
