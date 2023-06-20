@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://weblearnhub.xyz/</loc>
+  <lastmod>2023-06-20T11:24:47+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://weblearnhub.xyz/course/php-oop-a-to-z-beginner-to-expert</loc>
+  <lastmod>2023-06-20T11:24:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://weblearnhub.xyz/category/back-end-development</loc>
+  <lastmod>2023-06-20T11:24:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://weblearnhub.xyz/course/react-crash-course-including-react-hooks</loc>
+  <lastmod>2023-06-20T11:24:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://weblearnhub.xyz/category/front-end-development</loc>
+  <lastmod>2023-06-20T11:24:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://weblearnhub.xyz/course/learn-codeigniter-4-api-development-using-jwt-authentication</loc>
+  <lastmod>2023-06-20T11:24:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://weblearnhub.xyz/course/a-mock-interview-for-the-position-of-php-developer</loc>
+  <lastmod>2023-06-20T11:24:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://weblearnhub.xyz/category/interview-questions-and-answers</loc>
+  <lastmod>2023-06-20T11:24:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://weblearnhub.xyz/course/javascript-fundamentals-from-scratch:-a-complete-course-for-beginners-2023</loc>
+  <lastmod>2023-06-20T11:24:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://weblearnhub.xyz/course/php-mysql-course-for-beginners</loc>
+  <lastmod>2023-06-20T11:24:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://weblearnhub.xyz/category/full-stack-development</loc>
+  <lastmod>2023-06-20T11:24:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://weblearnhub.xyz/category/web-performance-optimization</loc>
+  <lastmod>2023-06-20T11:24:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://weblearnhub.xyz/about</loc>
+  <lastmod>2023-06-20T11:24:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://weblearnhub.xyz/privacy</loc>
+  <lastmod>2023-06-20T11:24:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
