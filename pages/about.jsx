@@ -4,10 +4,10 @@ export default function about() {
   return (
     <>
       <Head>
-        <title>About | DevLearnHub</title>
+        <title>About | WebLearnHub</title>
         <meta
           name="description"
-          content="Experience the power of web development with DevLearnHub"
+          content="Experience the power of web development with WebLearnHub"
         />
       </Head>
 

@@ -9,7 +9,7 @@ export default function Home({ featured, recent, popular }) {
     <>
       <Head>
         <title>DevLearnHub</title>
-        <meta name="description" content="Experience the power of web development with DevLearnHub." />
+        <meta name="description" content="Experience the power of web development with WebLearnHub." />
       </Head>
 
       <Homepage featured={featured} recent={recent} popular={popular} />

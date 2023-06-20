@@ -34,7 +34,7 @@ export default function Home() {
         <title>Search - {quaryData}</title>
         <meta
           name="description"
-          content="Experience the power of web development with DevLearnHub."
+          content="Experience the power of web development with WebLearnHub."
         />
       </Head>
       <section className="px-2 mt-14 min-h-screen dark:bg-gray-800">
