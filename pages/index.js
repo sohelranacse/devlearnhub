@@ -8,7 +8,7 @@ export default function Home({ featured, recent, popular }) {
   return (
     <>
       <Head>
-        <title>DevLearnHub</title>
+        <title>WebLearnHub</title>
         <meta name="description" content="Experience the power of web development with WebLearnHub." />
       </Head>
 
