@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import App from "next/app";
+// import App from "next/app";
 import axios from "axios";
 import { ThemeProvider } from "next-themes";
 import NextNProgress from "nextjs-progressbar";
@@ -17,13 +17,20 @@ function MyApp({ Component, pageProps, categoriesData }) {
   )
 }
 
-MyApp.getInitialProps = async (appContext) => {
+MyApp.getInitialProps = async () => {
+  const groupRes = await axios.get(`${API_URL}api/categories`);
+  return {
+    categoriesData: groupRes.data.response,
+  };
+};
+
+/*MyApp.getInitialProps = async (appContext) => {
   const appProps = await App.getInitialProps(appContext);
   const groupRes = await axios.get(`${API_URL}api/categories`);
   return {
     ...appProps,
     categoriesData: groupRes.data.response,
   };
-};
+};*/
 
 export default MyApp
