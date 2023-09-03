@@ -1,6 +1,6 @@
 # WebLearnHub.com
 
-[![WebLearnHub Logo](https://weblearnhub.xyz/dark-logo.png)](https://weblearnhub.xyz)
+[![WebLearnHub Logo](https://weblearnhub.xyz/logo-dark.png)](https://weblearnhub.xyz)
 
 WebLearnHub.com is a programming blog-based website dedicated to providing valuable and educational content for developers and technology enthusiasts.
 
